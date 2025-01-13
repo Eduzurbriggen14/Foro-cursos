@@ -39,4 +39,36 @@ public class UsuarioPerfil {
     public PerfilDTO toPerfilDTO() {
         return new PerfilDTO(this.perfil, this.estadoPerfil);
     }
+
+    public Long getIdUsuarioPerfil() {
+        return idUsuarioPerfil;
+    }
+
+    public void setIdUsuarioPerfil(Long idUsuarioPerfil) {
+        this.idUsuarioPerfil = idUsuarioPerfil;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Perfil getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(Perfil perfil) {
+        this.perfil = perfil;
+    }
+
+    public boolean isEstadoPerfil() {
+        return estadoPerfil;
+    }
+
+    public void setEstadoPerfil(boolean estadoPerfil) {
+        this.estadoPerfil = estadoPerfil;
+    }
 }

@@ -48,4 +48,44 @@ public class Respuesta {
             this.fecha = datos.fecha();
         }
     }
+
+    public Long getIdRespuesta() {
+        return idRespuesta;
+    }
+
+    public void setIdRespuesta(Long idRespuesta) {
+        this.idRespuesta = idRespuesta;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public Comentario getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(Comentario comentario) {
+        this.comentario = comentario;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }

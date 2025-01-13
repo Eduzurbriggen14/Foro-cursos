@@ -47,4 +47,43 @@ public class Curso {
         }
     }
 
+    public Long getIdCurso() {
+        return idCurso;
+    }
+
+    public void setIdCurso(Long idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    public String getNombreCurso() {
+        return nombreCurso;
+    }
+
+    public void setNombreCurso(String nombreCurso) {
+        this.nombreCurso = nombreCurso;
+    }
+
+    public CategoriaCurso getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(CategoriaCurso categoria) {
+        this.categoria = categoria;
+    }
+
+    public List<UsuarioCurso> getUsuarioCursos() {
+        return usuarioCursos;
+    }
+
+    public void setUsuarioCursos(List<UsuarioCurso> usuarioCursos) {
+        this.usuarioCursos = usuarioCursos;
+    }
+
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<Comentario> comentarios) {
+        this.comentarios = comentarios;
+    }
 }

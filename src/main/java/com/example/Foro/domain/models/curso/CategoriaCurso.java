@@ -23,4 +23,5 @@ public enum CategoriaCurso {
     public void setCategoriaCurso(String categoriaCurso) {
         this.categoriaCurso = categoriaCurso;
     }
+
 }

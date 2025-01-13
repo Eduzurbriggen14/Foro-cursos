@@ -49,7 +49,7 @@ public class UsuarioController {
 
         URI url = uri.path("/usuario/{id}").buildAndExpand(usuario.getIdUsuario()).toUri();
 
-        List<UsuarioPerfil> usuarioPerfil = usuarioRepository.findPerfilesByUsuarioId(usuario.getIdUsuario());
+        List<UsuarioPerfil> usuarioPerfil = usuarioRepository.findPerfilesByIdUsuario(usuario.getIdUsuario());
 
         List<UsuarioPerfilDTO> usuarioPerfilDTO = usuarioPerfil.stream()
                 .map(p -> new UsuarioPerfilDTO(p))

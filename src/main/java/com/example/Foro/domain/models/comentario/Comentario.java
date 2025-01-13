@@ -47,8 +47,11 @@ public class Comentario {
     public Comentario(RegistrarComentarioDTO registrarComentarioDTO){
         this.titulo = registrarComentarioDTO.titulo();
         this.contenido = registrarComentarioDTO.contenido();
-        if (registrarComentarioDTO ==null){
+        if (registrarComentarioDTO.estado() ==null){
             this.estadoComentario = EstadoComentario.PENDIENTE;
+        }
+        else{
+            this.estadoComentario = registrarComentarioDTO.estado();
         }
     }
 
@@ -66,4 +69,67 @@ public class Comentario {
         }
     }
 
+    public Long getIdComentario() {
+        return idComentario;
+    }
+
+    public void setIdComentario(Long idComentario) {
+        this.idComentario = idComentario;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
+    public EstadoComentario getEstadoComentario() {
+        return estadoComentario;
+    }
+
+    public void setEstadoComentario(EstadoComentario estadoComentario) {
+        this.estadoComentario = estadoComentario;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public List<Respuesta> getRespuestas() {
+        return respuestas;
+    }
+
+    public void setRespuestas(List<Respuesta> respuestas) {
+        this.respuestas = respuestas;
+    }
 }

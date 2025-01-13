@@ -29,6 +29,62 @@ public class Usuario implements UserDetails {
 
     private boolean activo;
 
+    public Long getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Long idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getPassw() {
+        return passw;
+    }
+
+    public void setPassw(String passw) {
+        this.passw = passw;
+    }
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    public List<UsuarioCurso> getUsuarioCursos() {
+        return usuarioCursos;
+    }
+
+    public void setUsuarioCursos(List<UsuarioCurso> usuarioCursos) {
+        this.usuarioCursos = usuarioCursos;
+    }
+
+    public List<UsuarioPerfil> getUsuarioPerfiles() {
+        return usuarioPerfiles;
+    }
+
+    public void setUsuarioPerfiles(List<UsuarioPerfil> usuarioPerfiles) {
+        this.usuarioPerfiles = usuarioPerfiles;
+    }
+
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<UsuarioCurso> usuarioCursos;
 

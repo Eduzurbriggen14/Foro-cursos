@@ -30,4 +30,36 @@ public class UsuarioCurso {
     private Curso curso;
 
     private LocalDate fechaInscripcion;
+
+    public Long getIdUsuarioCurso() {
+        return idUsuarioCurso;
+    }
+
+    public void setIdUsuarioCurso(Long idUsuarioCurso) {
+        this.idUsuarioCurso = idUsuarioCurso;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public LocalDate getFechaInscripcion() {
+        return fechaInscripcion;
+    }
+
+    public void setFechaInscripcion(LocalDate fechaInscripcion) {
+        this.fechaInscripcion = fechaInscripcion;
+    }
 }

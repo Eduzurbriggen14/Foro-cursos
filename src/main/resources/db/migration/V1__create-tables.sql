@@ -16,7 +16,7 @@ CREATE TABLE UsuarioPerfil (
                 'Profesor',
                 'Administrador') DEFAULT 'Estudiante',
     estadoPerfil BOOLEAN NOT NULL DEFAULT TRUE,
-    FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE CASCADE
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario) ON DELETE CASCADE
 );
 
 
@@ -41,8 +41,8 @@ CREATE TABLE UsuarioCurso (
     usuario_id BIGINT NOT NULL,
     curso_id BIGINT NOT NULL,
     fechaInscripcion DATE NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE CASCADE,
-    FOREIGN KEY (curso_id) REFERENCES Curso(id) ON DELETE CASCADE
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario) ON DELETE CASCADE,
+    FOREIGN KEY (curso_id) REFERENCES Curso(id_curso) ON DELETE CASCADE
 );
 
 
@@ -55,17 +55,17 @@ CREATE TABLE Comentario (
     fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     estadoComentario ENUM('Pendiente',
                           'Resuelto') DEFAULT 'Pendiente',
-    FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE CASCADE,
-    FOREIGN KEY (curso_id) REFERENCES Curso(id) ON DELETE CASCADE
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario) ON DELETE CASCADE,
+    FOREIGN KEY (curso_id) REFERENCES Curso(id_curso) ON DELETE CASCADE
 );
 
 
 -- Creación de la tabla RESPUESTA (relación con COMENTARIO)
-CREATE TABLE RESPUESTA (
+CREATE TABLE Respuesta (
     id_respuesta BIGINT AUTO_INCREMENT PRIMARY KEY,
     contenido TEXT NOT NULL,
-    id_usuario INT NOT NULL,
-    id_comentario INT NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES USUARIO(id_usuario) ON DELETE CASCADE,
-    FOREIGN KEY (id_comentario) REFERENCES COMENTARIO(id_comentario) ON DELETE CASCADE
+    id_usuario BIGINT NOT NULL,
+    id_comentario BIGINT NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario) ON DELETE CASCADE,
+    FOREIGN KEY (id_comentario) REFERENCES Comentario(id_comentario) ON DELETE CASCADE
 );
